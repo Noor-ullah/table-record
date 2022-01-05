@@ -1,0 +1,63 @@
+<!-- <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Name"> -->
+<center><input type="text" id="myinput"><input type="button" value="search"></center>
+<br>
+<table id="mytable" cellpadding="5" cellspacing="2" border="0" bgcolor="#dfdfdf" width="40%" align="center">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th width="20%">Age</th>
+            <th width="12%">Status</th>
+        </tr>
+    </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+    <script type="text/javascript">
+
+        // var inp = document.createElement('input');
+        // document.body.appendChild(inp);
+
+        var mainObj = [
+            {name: "Noor",age:  21, status: "Active"},
+            {
+                name: "Asif",
+                age:  28,
+                status: "Inactive"
+            },
+            {
+                name: "Noman",
+                age:  18,
+                status: "Active"
+            }
+        ];
+        var k = '<tbody>'
+        for(i = 0;i < mainObj.length; i++){
+            k+= '<tr>';
+            k+= '<td>' + mainObj[i].name + '</td>';
+            k+= '<td>' + mainObj[i].age + '</td>';
+            k+= '<td>' + mainObj[i].status + '</td>';
+            k+= '</tr>';
+        }
+        k+='</tbody>';
+        document.getElementById('tableData').innerHTML = k;
+
+        // const searbar = () =>{
+        //     let filter = document.getElementById("myinput").value.toUpperCase();
+
+        //     let mytable = document.getElementById("mytable");
+        //     let tr = mytable.getElementsByTagName("tr");
+
+        //     for(a = 0; a<tr.length; a++){
+        //         let td = tr[a].getElementsByTagName("td")[0];
+
+        //         if(td){
+        //             let textvalue = td.textContent || td.innerHTML;
+        //             if(textvalue.toUpperCase().indexOf(filter) > -1){
+        //                 tr[a].style.display = "";
+
+        //             }else{
+        //                 tr[a].style.display ="none";
+        //             }
+        //         }
+        //     }
+        // }
+        </script>
